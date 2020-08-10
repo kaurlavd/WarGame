@@ -33,14 +33,14 @@ public class Game {
         g.deck.shuffle();          // g goes to method for shuffling cards
         g.deal();                 // g goes to the method for dealing cards
 
-        System.out.println("Press 1 to play manually.");
+         System.out.println("Press 1 to play manually.");
         System.out.println("Press 0 to play automatically.");
         if( g.in.nextInt() ==0 ){
-           g.control = 0;
-       }
-        g.round();                 //g goes to the round method
+            g.control = 0;
+        }
+        g.round();
         while( g.play ){    
-        if(g.in.nextInt() == 1 || g.control == 0){
+        if( g.control == 0 || g.in.nextInt() == 1 ){
         g.round();
         }
         }
